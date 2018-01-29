@@ -1,3 +1,27 @@
 ul {
     list-style-type: none;
 }
+
+.main__courses, .main__gallery, .main__news, .main__difference, .main__prices {
+    padding: 85px 0;
+}
+
+.icon-container {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    &::before, &::after {
+        width: 40px;
+        content: "";
+        display: block;
+        height: 2px;
+        background-color: $melon;
+        position: relative;
+        left: 30px;     
+    }
+}
+
+.icon-container img::after {
+    left: auto;
+    right: 30px;
+}
