@@ -1,0 +1,97 @@
+.header__contact {
+    background-color: $black;
+}
+
+.header__menu {
+    background-color: $white;
+}
+
+.header__splash {
+    background-image: url('../images/header-background.png')
+}
+
+.header__contact {
+    .fa {
+        color: $melon;
+        float: left;
+        font-size: 0.8rem;
+            p {
+                font-size: 0.7rem;
+                font-weight: 400;
+                font-family: 'Montserrat', sans-serif;
+                display: inline-block;  
+                margin-left: 6px;
+                margin-right: 24px;    
+                a {
+                    color: $white;
+                    text-decoration: none;                    
+                }
+                a:hover {
+                    text-decoration: underline;
+                    color: $melon;
+                }      
+            }
+        }
+    }
+
+
+  
+address {
+    flex: 0 1 25%;
+    text-align: left;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.logo {
+    flex: 0 1 25%;
+    text-align: center;
+}
+
+.membership-links {
+    flex: 0 1 25%;
+    text-align: right;
+}
+
+.logo img {
+    margin: 14px 0;
+}
+
+.header__menu {
+    .menu__aside {
+        padding-left: 15px;
+    }
+    li {
+    text-align: left;
+    list-style-position: inside;
+    float: left; 
+    }
+}
+
+.header__menu .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+ul.menu {
+    padding-left: 0;
+    li:first-of-type a {
+        margin-left: 0;
+    }
+}
+
+ul.menu__aside {
+    padding-left: 0;
+}
+
+// .menu {
+//     flex: 0 1 85%;
+// }
+// .menu__aside {
+//     flex: 0 1 15%;
+
+// }

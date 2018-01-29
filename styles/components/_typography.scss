@@ -1,0 +1,43 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+.membership-links {
+        text-transform: capitalize;
+    a {
+        font-size: 0.7rem;
+        font-weight: 400;
+        font-family: 'Montserrat', sans-serif;
+        text-decoration: none;
+        color: $white;
+    }
+    a:hover {
+        text-decoration: underline;
+        color: $melon;
+    } 
+}
+
+.membership-color {
+    color: $white;
+    font-size: 0.7rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;    
+}
+
+.header__menu {
+    a {
+        font-size: 0.75rem;
+        color: $black;
+        text-transform: uppercase;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        margin-left: 35px; 
+        &:hover {
+            border-bottom: 2px solid $lightblack;
+            color: $lightblack;
+        }
+    }
+}

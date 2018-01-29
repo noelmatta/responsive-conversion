@@ -7,87 +7,87 @@
     <title>Genius</title>
     <!-- Coded by Noel Matta for HackerYou's #Cohort17 Winter 2018 Front-End Development bootcamp, design provided by instructors  -->
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Poppins:300|Raleway:100,300,400,500,700,900" rel="stylesheet">
     <script src="https://use.fontawesome.com/715aee6b06.js"></script>
 </head>
 <body>
     <header>
         <nav class="header__contact">
             <div class="wrapper">
-                <address>
-                    <ul class="phone">
-                        <li>
-                            <i class="fa fa-phone" aria-hidden="true" title="Telephone: (541) 754-3010">
-                                <p>
-                                    <a href="tel:+1-541-754-3010">(541) 754-3010</a>
-                                </p>
-                            </i>
-                        </li>
-                    </ul>
-                    <ul class="email">
-                        <li>
-                            <i class="fa fa-envelope-o" aria-hidden="true" title="Email: (541) 754-3010">
-                                <p>
-                                    <a href="mailto:contact@com.vn">contact@com.vn</a>
-                                </p>
-                            </i>
-                        </li>
-                    </ul>
-                </address>
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="Genius logo">
-                    </a>
+                <div class="flex-container clearfix">
+                    <address>
+                        <ul class="phone">
+                            <li>
+                                <i class="fa fa-phone" aria-hidden="true" title="Telephone: (541) 754-3010">
+                                    <p>
+                                        <a href="tel:+1-541-754-3010">(541) 754-3010</a>
+                                    </p>
+                                </i>
+                            </li>
+                        </ul>
+                        <ul class="email">
+                            <li>
+                                <i class="fa fa-envelope-o" aria-hidden="true" title="Email: (541) 754-3010">
+                                    <p>
+                                        <a href="mailto:contact@com.vn">contact@com.vn</a>
+                                    </p>
+                                </i>
+                            </li>
+                        </ul>
+                    </address>
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="Genius logo">
+                        </a>
+                    </div>
+                    <p class="membership-links">                     
+                        <a href="register.html">register</a> <span class="membership-color">|</span>
+                        <a href="login.html">login</a>
+                    </p>
                 </div>
-                <p class="membership-links">                     
-                    <a href="register.html">
-                        register
-                    </a>
-                    |
-                    <a href="login.html">
-                        login
-                    </a>
-                </p>
             </div>
         </nav>
         <nav class="header__menu">
             <div class="wrapper">
-                <ul class="menu">
-                    <li>
-                        <a href="index.html">home</a>
-                    </li>
-                    <li>
-                        <a href="index.html">pages</a>
-                    </li>
-                    <li>
-                        <a href="index.html">courses</a>
-                    </li>
-                    <li>
-                        <a href="index.html">features</a>
-                    </li>
-                    <li>
-                        <a href="index.html">shop</a>
-                    </li>
-                    <li>
-                        <a href="index.html">news</a>
-                    </li>
-                    <li>
-                        <a href="index.html">events</a>
-                    </li>
-                </ul>
-                <ul class="menu__aside">
-                    <li>
-                        <a href="shopping-cart.html">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span class="sr-only">shopping cart</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="search.html">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                            <span class="sr-only">search</span>
-                        </a>
-                    </li>
-                </ul>
+                <div class="flex-container">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html">home</a>
+                        </li>
+                        <li>
+                            <a href="index.html">pages</a>
+                        </li>
+                        <li>
+                            <a href="index.html">courses</a>
+                        </li>
+                        <li>
+                            <a href="index.html">features</a>
+                        </li>
+                        <li>
+                            <a href="index.html">shop</a>
+                        </li>
+                        <li>
+                            <a href="index.html">news</a>
+                        </li>
+                        <li>
+                            <a href="index.html">events</a>
+                        </li>
+                    </ul>
+                    <ul class="menu__aside">
+                        <li>
+                            <a href="shopping-cart.html">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span class="sr-only">shopping cart</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="search.html">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <span class="sr-only">search</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <section class="header__splash">
@@ -606,7 +606,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer__widgets">
         <div class="wrapper">
             <section class="about">
                 <img src="images/logo.png" alt="Genius logo">
@@ -665,7 +665,7 @@
             </section>
         </div>
     </footer>
-    <footer class="footer-nav">
+    <footer class="footer__nav">
         <div class="wrapper">
             <ul>
                 <li>home</li>
