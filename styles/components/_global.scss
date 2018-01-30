@@ -1,5 +1,6 @@
 ul {
     list-style-type: none;
+    padding-left: 0;
 }
 
 .main__courses, .main__gallery, .main__news, .main__difference, .main__prices {
@@ -10,18 +11,16 @@ ul {
     position: relative;
     text-align: center;
     margin: 0 auto;
+    padding-bottom: 45px;
     &::before, &::after {
-        width: 40px;
+        width: 28px;
         content: "";
-        display: block;
-        height: 2px;
+        display: inline-block;
+        height: 1.5px;
         background-color: $melon;
-        position: relative;
-        left: 30px;     
+        position: relative;    
+        bottom: 13px;
+        margin: 0 15px;
     }
 }
 
-.icon-container img::after {
-    left: auto;
-    right: 30px;
-}

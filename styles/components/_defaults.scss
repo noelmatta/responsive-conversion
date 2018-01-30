@@ -4,14 +4,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .wrapper {
     width: 100%;
-    max-width: 1080px;
+    max-width: 1180px;
     margin: 0 auto;
 }
 
-.flex-container {
-    display: flex;
-    flex-direction: row;
-}
+
 
 .header__contact .flex-container {
     justify-content: space-between;

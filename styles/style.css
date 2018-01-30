@@ -134,17 +134,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .wrapper {
   width: 100%;
-  max-width: 1080px;
+  max-width: 1180px;
   margin: 0 auto; }
-
-.flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row; }
 
 .header__contact .flex-container {
   -webkit-box-pack: justify;
@@ -209,10 +200,14 @@ h1 {
   font-size: 3.4rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  line-height: 4.2rem; }
+  line-height: 4.3rem; }
 
 p {
   line-height: 1.6rem; }
+
+.news-author-info {
+  font-size: 0.9rem;
+  margin: 0; }
 
 h3 {
   text-align: center;
@@ -225,10 +220,77 @@ h2 {
   text-align: center;
   font-weight: 700;
   font-size: 2.2rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+
+.menu__course-type a {
+  color: #111111;
+  text-decoration: none; }
+
+h4 {
+  margin-bottom: 22px; }
+
+.price-details {
+  background-color: #ffffff;
+  margin: 10px; }
+
+h6 a {
+  color: #444444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 15px 0; }
+
+.price-box h4 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  font-weight: 700; }
+
+h4.news-header {
+  margin: 40px 0 10px 0;
+  font-size: 1.4rem; }
+
+h5.instructor {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1rem; }
+
+p.view-profile {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: #86bc42; }
+  p.view-profile a {
+    text-transform: uppercase;
+    color: #86bc42;
+    text-decoration: none;
+    font-size: 0.85rem; }
+
+.course-info-footer ul {
+  margin: 0; }
+
+.course-info-footer li {
+  float: left;
+  margin-right: 10px; }
+
+.course-info-footer .fa {
+  color: #222222; }
+
+.free {
+  color: #86bc42;
+  text-transform: capitalize;
+  font-weight: 500; }
+
+.courses h4, footer .contact h4, .newsletters h4 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding-bottom: 15px; }
 
 ul {
-  list-style-type: none; }
+  list-style-type: none;
+  padding-left: 0; }
 
 .main__courses, .main__gallery, .main__news, .main__difference, .main__prices {
   padding: 85px 0; }
@@ -236,22 +298,22 @@ ul {
 .icon-container {
   position: relative;
   text-align: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 45px; }
   .icon-container::before, .icon-container::after {
-    width: 40px;
+    width: 28px;
     content: "";
-    display: block;
-    height: 2px;
+    display: inline-block;
+    height: 1.5px;
     background-color: #86bc42;
     position: relative;
-    left: 30px; }
-
-.icon-container img::after {
-  left: auto;
-  right: 30px; }
+    bottom: 13px;
+    margin: 0 15px; }
 
 .header__splash {
   background-image: url("../images/header-background.png");
+  z-index: 1;
+  position: relative;
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat; }
@@ -310,6 +372,10 @@ address {
     margin: 14px 0; }
 
 .header__menu {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.35);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.35);
+  z-index: 100;
+  position: relative;
   background-color: #ffffff; }
   .header__menu .menu__aside {
     padding-left: 22px; }
@@ -335,7 +401,7 @@ address {
     padding-left: 0; }
 
 .header__splash p {
-  padding-bottom: 30px; }
+  padding-bottom: 35px; }
 
 .learning-link a {
   color: #ffffff;
@@ -364,11 +430,371 @@ address {
 .main__difference {
   background-color: #f4f6fa; }
 
+.menu__course-type {
+  text-align: center;
+  display: block;
+  margin-bottom: 40px; }
+
+.menu__course-type ul {
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .menu__course-type ul li {
+    float: left;
+    padding-right: 30px;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    font-weight: 300; }
+  .menu__course-type ul li:last-of-type {
+    padding-right: 0; }
+  .menu__course-type ul li:first-child a {
+    color: #86bc42; }
+
+.difference-box {
+  position: relative; }
+
+.course-boxes, .gallery-boxes, .difference-box, .price-flex, .flex-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.price-flex {
+  margin-top: 70px; }
+
+.difference-block {
+  width: calc((100% / 3) - 24px);
+  position: relative; }
+
+.difference-details {
+  position: absolute;
+  top: 45px;
+  left: 40px; }
+  .difference-details img {
+    float: left;
+    padding-right: 15px; }
+  .difference-details p {
+    padding-left: 46px;
+    font-size: 0.9rem; }
+  .difference-details h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-top: 3px; }
+
+.difference-circle {
+  width: 210px;
+  height: 210px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0; }
+
+.price-box {
+  width: calc((100% / 3) - 20px); }
+
+.single-image-box {
+  width: calc((100% / 3) - 12px);
+  margin-bottom: 12px; }
+
+.single-course-box {
+  width: calc((100% / 4) - 15px);
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1; }
+
+.single-course-img img, .single-image-box img {
+  width: 100%; }
+
+.free {
+  float: right; }
+
+.course-info {
+  padding: 19px;
+  border-bottom: 1px solid #e1e1e1; }
+  .course-info h4 {
+    min-height: 50px; }
+
+.avatar {
+  float: left;
+  margin-right: 10px; }
+
+.course-info-footer {
+  padding: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .course-info-footer ul {
+    padding: 0 0; }
+
+.news-block {
+  background-color: #f4f6fa;
+  padding: 25px;
+  position: relative;
+  margin: 60px 0; }
+
+.news-block:first-of-type {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 1, 0.2);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 1, 0.2); }
+
+.news-image {
+  position: absolute;
+  top: -25px;
+  width: 45%;
+  float: left; }
+
+.news-image img {
+  width: 100%; }
+
+.news-details {
+  width: 48%;
+  float: right; }
+  .news-details a {
+    color: #444444; }
+  .news-details a:hover {
+    color: #86bc42; }
+  .news-details p {
+    clear: both; }
+  .news-details p:last-of-type {
+    margin: 40px 0 61px 0; }
+  .news-details ul {
+    margin: 0;
+    padding: 0; }
+    .news-details ul li {
+      float: left;
+      padding-right: 10px; }
+
+a.link-button {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  background-color: #86bc42;
+  padding: 10px 32px;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  a.link-button:hover {
+    background-color: #111111;
+    color: #86bc42; }
+
+.price-box {
+  background: #f0f2f7;
+  text-align: center; }
+  .price-box:nth-of-type(2) {
+    background-color: #86bc42; }
+    .price-box:nth-of-type(2) .price-circle {
+      background-color: #86bc42;
+      color: #ffffff;
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25);
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25); }
+      .price-box:nth-of-type(2) .price-circle:hover {
+        background-color: #111111;
+        color: #ffffff; }
+
+.price-circle {
+  padding: 5px;
+  border-radius: 50%;
+  border: 10px solid #ffffff;
+  background-color: #f0f2f7;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  top: -60px;
+  position: relative;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+  .price-circle p {
+    position: absolute;
+    top: -10%;
+    width: 80%;
+    font-size: 2.2rem;
+    font-weight: 700; }
+  .price-circle p:before {
+    content: "$";
+    vertical-align: super;
+    font-size: 1rem; }
+  .price-circle:hover {
+    background-color: #111111;
+    color: #ffffff;
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); }
+
+.price-details {
+  margin-top: 35px;
+  padding: 10px; }
+  .price-details li {
+    text-transform: capitalize;
+    font-weight: 300;
+    color: #444444;
+    padding: 1rem 0; }
+
 .footer__widgets {
   background-color: #222222; }
 
 .footer__nav {
   background-color: #111111; }
+
+.about, .newsletters {
+  width: 32%; }
+
+.courses, .contact {
+  width: 18%; }
+
+.footer__widgets {
+  padding-bottom: 60px; }
+  .footer__widgets .flex-container {
+    padding-top: 70px;
+    color: #ffffff;
+    font-size: 0.85rem; }
+
+.about {
+  padding-right: 120px; }
+  .about p {
+    line-height: 1.3rem;
+    margin-bottom: 1.5rem; }
+
+.footer__nav ul {
+  margin-top: 0; }
+
+.genius {
+  color: #86bc42; }
+
+.about li {
+  margin-bottom: 0.8rem; }
+  .about li:before {
+    /* snippet modified from https://stackoverflow.com/questions/12468359/using-font-awesome-icon-for-bullet-points-with-a-single-list-item-element */
+    font-family: 'FontAwesome';
+    content: '\f00c';
+    margin: 0 5px 0 0px;
+    padding-right: 5px;
+    color: #86bc42; }
+
+footer .courses li {
+  margin-bottom: 1.1rem;
+  text-transform: capitalize; }
+  footer .courses li:first-of-type {
+    padding-top: 6px; }
+  footer .courses li a {
+    color: #ffffff;
+    text-decoration: none; }
+  footer .courses li a:active, footer .courses li a:hover {
+    margin-left: 15px; }
+
+footer .contact {
+  margin-bottom: 0.8rem; }
+
+.newsletters {
+  padding: 0 60px; }
+  .newsletters input[type="text"] {
+    color: #444444;
+    width: 80%;
+    border-radius: 4px;
+    border: 0;
+    padding: 8px 30px; }
+  .newsletters input[type="submit"] {
+    background: #86bc42;
+    border: 0;
+    color: #ffffff; }
+
+form ~ p {
+  margin: 20px 0; }
+
+footer .contact-details {
+  padding-right: 60px; }
+  footer .contact-details li {
+    margin-bottom: 6px; }
+  footer .contact-details p {
+    display: inline-block;
+    margin: 0; }
+  footer .contact-details .contact-address p {
+    padding-bottom: 0; }
+  footer .contact-details .contact-address:before {
+    font-family: 'FontAwesome';
+    content: '\f041';
+    padding-right: 5px;
+    color: #86bc42; }
+  footer .contact-details .contact-phone a, footer .contact-details .contact-email a {
+    color: #ffffff;
+    text-decoration: none; }
+  footer .contact-details .contact-phone:before, footer .contact-details .contact-email:before {
+    font-family: 'FontAwesome';
+    content: '\f098';
+    padding-right: 5px;
+    color: #86bc42; }
+  footer .contact-details .contact-email:before {
+    font-family: 'FontAwesome';
+    content: '\f0e0';
+    padding-right: 5px;
+    color: #86bc42; }
+
+.fa-map-marker {
+  float: left; }
+
+.about > img {
+  padding-bottom: 14px; }
+
+.social a {
+  margin-right: 15px;
+  font-size: 1.5rem; }
+
+.social a[href="http://www.facebook.com/#"] {
+  color: #3b5999; }
+
+.social a[href="http://www.twitter.com/#"] {
+  color: #00abee; }
+
+.social a[href="http://www.google.com/#"] {
+  color: #df2a2a; }
+
+.social a[href="http://www.instagram.com/#"] {
+  color: #854e42; }
+
+.social a:hover {
+  color: #86bc42; }
+
+.footer__nav {
+  font-size: 0.9rem;
+  color: #ffffff; }
+  .footer__nav ul {
+    width: 50%;
+    padding: 20px 0;
+    margin-top: 0; }
+  .footer__nav li {
+    float: left;
+    padding-right: 30px; }
+  .footer__nav a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase; }
+
+.copyright {
+  padding: 20px 0;
+  text-align: right;
+  margin-top: 0;
+  clear: both; }
+  .copyright p {
+    margin: 0;
+    padding: 0; }
+  .copyright .copyright-color {
+    color: #86bc42; }
 
 /* make the partial
 save the partial

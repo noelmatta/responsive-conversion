@@ -1,5 +1,7 @@
 .header__splash {
     background-image: url('../images/header-background.png');
+    z-index: 1;
+    position: relative;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -63,6 +65,9 @@ address {
 }
 
 .header__menu {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.35);
+    z-index: 100;
+    position: relative;
     background-color: $white;
     .menu__aside {
         padding-left: 22px;
@@ -88,7 +93,7 @@ address {
 }
 
 .header__splash p {
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 }
 
 .learning-link a {

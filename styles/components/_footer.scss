@@ -5,3 +5,189 @@
 .footer__nav {
     background-color: $black;
 }
+
+.about, .newsletters {
+    width: 32%;
+}
+
+.courses, .contact {
+    width: 18%;
+}
+
+.footer__widgets {
+    padding-bottom: 60px;
+    .flex-container {
+        padding-top: 70px;
+        color: $white;
+        font-size: 0.85rem;
+    }
+}
+
+.about {
+    padding-right: 120px;
+    p {
+        line-height: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.footer__nav ul {
+    margin-top: 0;
+}
+
+.genius {
+    color: $melon;
+}
+
+
+.about li {
+    margin-bottom: 0.8rem;
+    &:before { /* snippet modified from https://stackoverflow.com/questions/12468359/using-font-awesome-icon-for-bullet-points-with-a-single-list-item-element */
+        font-family: 'FontAwesome';
+        content: '\f00c';
+        margin: 0 5px 0 0px;
+        padding-right: 5px;
+        color: $melon;        
+    }
+}
+
+footer .courses {
+    li {
+        margin-bottom: 1.1rem;
+        text-transform: capitalize;
+        &:first-of-type {
+            padding-top: 6px;
+        }            
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+        a:active, a:hover {
+            margin-left: 15px;        
+        }
+    }
+}
+
+footer .contact {
+    margin-bottom: 0.8rem;
+}
+
+.newsletters {
+    padding: 0 60px;
+    input[type="text"] {
+        color: $lightblack;
+        width: 80%;
+        border-radius: 4px;
+        border: 0;
+        padding: 8px 30px;
+    }
+    input[type="submit"] {
+        background: $melon;
+        border: 0;
+        color: $white;
+    }
+}
+
+form ~ p {
+    margin: 20px 0;
+}
+
+footer .contact-details {
+    padding-right: 60px;
+    li {
+        margin-bottom: 6px;
+    }
+    p {
+        display: inline-block;
+        margin: 0;
+    }
+    .contact-address p {
+        padding-bottom: 0;
+    }
+    .contact-address:before {
+        font-family: 'FontAwesome';
+        content: '\f041';
+        padding-right: 5px;
+        color: $melon;         
+    }
+    .contact-phone, .contact-email {
+        a {
+            color: $white;
+            text-decoration: none;
+        }        
+        &:before {
+            font-family: 'FontAwesome';
+            content: '\f098';
+            padding-right: 5px;
+            color: $melon;         
+        }
+    }
+    .contact-email:before {
+        font-family: 'FontAwesome';
+        content: '\f0e0';
+        padding-right: 5px;
+        color: $melon;                 
+    }
+}
+.fa-map-marker {
+    float: left;
+}
+
+.about > img {
+    padding-bottom: 14px;
+}
+
+.social {
+    a {
+        margin-right: 15px;
+        font-size: 1.5rem;
+    }
+    a[href="http://www.facebook.com/#"] {
+        color: $facebook;
+    }
+    a[href="http://www.twitter.com/#"] {
+        color: $twitter;
+    }
+    a[href="http://www.google.com/#"] {
+        color: $google;
+    }
+    a[href="http://www.instagram.com/#"] {
+        color: $instagram;
+    }    
+    a:hover {
+        color: $melon;
+    }
+}
+
+.footer__nav {
+    font-size: 0.9rem;
+    ul {
+        width: 50%;
+        padding: 20px 0;
+        margin-top: 0;
+    }
+    color: $white;
+    li {
+        float: left;
+        padding-right: 30px;
+    }
+    a {
+        text-decoration: none;
+        color: $white;
+        text-transform: uppercase;
+    }
+}
+
+.copyright { 
+    padding: 20px 0;
+    text-align: right;
+    margin-top: 0;
+    clear: both;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    .copyright-color {
+        color: $melon;
+    }
+}
