@@ -35,7 +35,7 @@
     margin-top: 0;
 }
 
-.genius {
+.type-green {
     color: $melon;
 }
 
@@ -55,15 +55,21 @@ footer .courses {
     li {
         margin-bottom: 1.1rem;
         text-transform: capitalize;
+        &:first-of-type:before {
+            display: inline-block;
+            font-family: 'FontAwesome';
+            content: '\f054';
+            margin: 0 5px 0 0px;
+            padding-right: 5px;
+            color: $melon; 
+
+        }
         &:first-of-type {
             padding-top: 6px;
         }            
         a {
             color: $white;
             text-decoration: none;
-        }
-        a:active, a:hover {
-            margin-left: 15px;        
         }
     }
 }
@@ -85,11 +91,25 @@ footer .contact {
         background: $melon;
         border: 0;
         color: $white;
+        font-family: 'FontAwesome';
     }
+}
+
+button[type="submit"] {
+    background: $melon;
+    color: $white;
+    border: 0;
+    margin: 0 auto;
+    padding: 9px 17px;
 }
 
 form ~ p {
     margin: 20px 0;
+}
+
+.indent-address {
+    display: block;
+    overflow: hidden;
 }
 
 footer .contact-details {
@@ -103,14 +123,22 @@ footer .contact-details {
     }
     .contact-address p {
         padding-bottom: 0;
+        margin-left: 10px;
     }
+
+    
     .contact-address:before {
         font-family: 'FontAwesome';
         content: '\f041';
         padding-right: 5px;
-        color: $melon;         
+        color: $melon;   
+        float: left;
+        margin-top: 5px;      
     }
     .contact-phone, .contact-email {
+        p {
+            margin-left: 5px;
+        }
         a {
             color: $white;
             text-decoration: none;
@@ -160,7 +188,7 @@ footer .contact-details {
 }
 
 .footer__nav {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     ul {
         width: 50%;
         padding: 20px 0;
@@ -169,7 +197,7 @@ footer .contact-details {
     color: $white;
     li {
         float: left;
-        padding-right: 30px;
+        padding-right: 20px;
     }
     a {
         text-decoration: none;

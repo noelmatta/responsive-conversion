@@ -60,6 +60,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
+.course-info h4 {
+    hyphens: auto;
+    font-size: 1.15rem;
+}
+
 h1 {
     font-weight: 900;
     font-size: 3.4rem;
@@ -120,7 +125,7 @@ h6 a {
 .price-box {
     h4 {
     text-transform: uppercase;
-    font-size: 1.3rem;
+    font-size: 1.45rem;
     margin-bottom: 5px;
     font-weight: 700;
     }

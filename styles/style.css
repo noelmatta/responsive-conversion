@@ -195,6 +195,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
+.course-info h4 {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  font-size: 1.15rem; }
+
 h1 {
   font-weight: 900;
   font-size: 3.4rem;
@@ -244,7 +250,7 @@ h6 a {
 
 .price-box h4 {
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   margin-bottom: 5px;
   font-weight: 700; }
 
@@ -398,7 +404,8 @@ address {
     -ms-flex-pack: center;
     justify-content: center; }
   .header__menu .menu {
-    padding-left: 0; }
+    padding-left: 0;
+    padding-right: 28px; }
 
 .header__splash p {
   padding-bottom: 35px; }
@@ -507,12 +514,19 @@ address {
 
 .single-image-box {
   width: calc((100% / 3) - 12px);
-  margin-bottom: 12px; }
+  margin-bottom: 13px; }
 
 .single-course-box {
   width: calc((100% / 4) - 15px);
   margin-bottom: 20px;
-  border: 1px solid #e1e1e1; }
+  border: 1px solid #e1e1e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .single-course-img img, .single-image-box img {
   width: 100%; }
@@ -523,8 +537,6 @@ address {
 .course-info {
   padding: 19px;
   border-bottom: 1px solid #e1e1e1; }
-  .course-info h4 {
-    min-height: 50px; }
 
 .avatar {
   float: left;
@@ -543,7 +555,7 @@ address {
 
 .news-block {
   background-color: #f4f6fa;
-  padding: 25px;
+  padding: 0 20px;
   position: relative;
   margin: 60px 0; }
 
@@ -552,23 +564,22 @@ address {
   box-shadow: 0 0 10px 0 rgba(0, 0, 1, 0.2); }
 
 .news-image {
-  position: absolute;
+  position: relative;
   top: -25px;
-  width: 45%;
+  width: 48.5%;
   float: left; }
 
 .news-image img {
   width: 100%; }
 
 .news-details {
-  width: 48%;
+  float: right;
+  width: 47%;
   float: right; }
   .news-details a {
     color: #444444; }
   .news-details a:hover {
     color: #86bc42; }
-  .news-details p {
-    clear: both; }
   .news-details p:last-of-type {
     margin: 40px 0 61px 0; }
   .news-details ul {
@@ -588,16 +599,28 @@ a.link-button {
   text-transform: uppercase;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s; }
+  transition: 0.5s;
+  position: absolute;
+  bottom: 30px; }
   a.link-button:hover {
     background-color: #111111;
     color: #86bc42; }
 
 .price-box {
+  padding-top: 90px;
+  position: relative;
   background: #f0f2f7;
   text-align: center; }
+  .price-box h5 {
+    font-weight: 500;
+    font-size: 0.9rem; }
+  .price-box h6 {
+    padding: 30px 0; }
   .price-box:nth-of-type(2) {
-    background-color: #86bc42; }
+    background-color: #86bc42;
+    color: #ffffff; }
+    .price-box:nth-of-type(2) h6 a {
+      color: #ffffff; }
     .price-box:nth-of-type(2) .price-circle {
       background-color: #86bc42;
       color: #ffffff;
@@ -614,9 +637,12 @@ a.link-button {
   background-color: #f0f2f7;
   width: 120px;
   height: 120px;
-  margin: 0 auto;
   top: -60px;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s; }
@@ -674,7 +700,7 @@ a.link-button {
 .footer__nav ul {
   margin-top: 0; }
 
-.genius {
+.type-green {
   color: #86bc42; }
 
 .about li {
@@ -690,13 +716,18 @@ a.link-button {
 footer .courses li {
   margin-bottom: 1.1rem;
   text-transform: capitalize; }
+  footer .courses li:first-of-type:before {
+    display: inline-block;
+    font-family: 'FontAwesome';
+    content: '\f054';
+    margin: 0 5px 0 0px;
+    padding-right: 5px;
+    color: #86bc42; }
   footer .courses li:first-of-type {
     padding-top: 6px; }
   footer .courses li a {
     color: #ffffff;
     text-decoration: none; }
-  footer .courses li a:active, footer .courses li a:hover {
-    margin-left: 15px; }
 
 footer .contact {
   margin-bottom: 0.8rem; }
@@ -712,10 +743,22 @@ footer .contact {
   .newsletters input[type="submit"] {
     background: #86bc42;
     border: 0;
-    color: #ffffff; }
+    color: #ffffff;
+    font-family: 'FontAwesome'; }
+
+button[type="submit"] {
+  background: #86bc42;
+  color: #ffffff;
+  border: 0;
+  margin: 0 auto;
+  padding: 9px 17px; }
 
 form ~ p {
   margin: 20px 0; }
+
+.indent-address {
+  display: block;
+  overflow: hidden; }
 
 footer .contact-details {
   padding-right: 60px; }
@@ -725,12 +768,17 @@ footer .contact-details {
     display: inline-block;
     margin: 0; }
   footer .contact-details .contact-address p {
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    margin-left: 10px; }
   footer .contact-details .contact-address:before {
     font-family: 'FontAwesome';
     content: '\f041';
     padding-right: 5px;
-    color: #86bc42; }
+    color: #86bc42;
+    float: left;
+    margin-top: 5px; }
+  footer .contact-details .contact-phone p, footer .contact-details .contact-email p {
+    margin-left: 5px; }
   footer .contact-details .contact-phone a, footer .contact-details .contact-email a {
     color: #ffffff;
     text-decoration: none; }
@@ -771,7 +819,7 @@ footer .contact-details {
   color: #86bc42; }
 
 .footer__nav {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: #ffffff; }
   .footer__nav ul {
     width: 50%;
@@ -779,7 +827,7 @@ footer .contact-details {
     margin-top: 0; }
   .footer__nav li {
     float: left;
-    padding-right: 30px; }
+    padding-right: 20px; }
   .footer__nav a {
     text-decoration: none;
     color: #ffffff;
