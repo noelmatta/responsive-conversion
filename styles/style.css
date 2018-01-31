@@ -134,7 +134,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .wrapper {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1080px;
   margin: 0 auto; }
 
 .header__contact .flex-container {
@@ -181,8 +181,8 @@ body {
   text-decoration: none;
   margin-left: 35px; }
   .header__menu a:hover {
-    border-bottom: 2px solid #444444;
-    color: #444444; }
+    border-bottom: 2px solid #86bc42;
+    color: #86bc42; }
 
 a .fa-shopping-cart {
   color: #86bc42; }
@@ -273,6 +273,8 @@ p.view-profile {
     color: #86bc42;
     text-decoration: none;
     font-size: 0.85rem; }
+  p.view-profile a:hover {
+    color: #111111; }
 
 .course-info-footer ul {
   margin: 0; }
@@ -283,6 +285,9 @@ p.view-profile {
 
 .course-info-footer .fa {
   color: #222222; }
+
+.course-info-footer a .fa:hover {
+  color: #86bc42; }
 
 .free {
   color: #86bc42;
@@ -355,9 +360,6 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 30%;
-  flex: 0 1 30%;
   text-align: left; }
   address ul {
     margin: 0;
@@ -458,7 +460,7 @@ address {
     font-weight: 300; }
   .menu__course-type ul li:last-of-type {
     padding-right: 0; }
-  .menu__course-type ul li:first-child a {
+  .menu__course-type ul li:first-child a, .menu__course-type ul li a:hover {
     color: #86bc42; }
 
 .difference-box {
@@ -616,11 +618,15 @@ a.link-button {
     font-size: 0.9rem; }
   .price-box h6 {
     padding: 30px 0; }
+  .price-box h6 a:hover {
+    color: #86bc42; }
   .price-box:nth-of-type(2) {
     background-color: #86bc42;
     color: #ffffff; }
     .price-box:nth-of-type(2) h6 a {
       color: #ffffff; }
+    .price-box:nth-of-type(2) h6 a:hover {
+      color: #111111; }
     .price-box:nth-of-type(2) .price-circle {
       background-color: #86bc42;
       color: #ffffff;
@@ -658,10 +664,10 @@ a.link-button {
     font-size: 1rem; }
   .price-circle:hover {
     background-color: #111111;
-    color: #ffffff;
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg); }
+    color: #ffffff; }
+
+.menu__mobile {
+  display: none; }
 
 .price-details {
   margin-top: 35px;
@@ -728,6 +734,8 @@ footer .courses li {
   footer .courses li a {
     color: #ffffff;
     text-decoration: none; }
+  footer .courses li a:hover {
+    color: #86bc42; }
 
 footer .contact {
   margin-bottom: 0.8rem; }
@@ -736,15 +744,10 @@ footer .contact {
   padding: 0 60px; }
   .newsletters input[type="text"] {
     color: #444444;
-    width: 80%;
+    width: 70%;
     border-radius: 4px;
     border: 0;
-    padding: 8px 30px; }
-  .newsletters input[type="submit"] {
-    background: #86bc42;
-    border: 0;
-    color: #ffffff;
-    font-family: 'FontAwesome'; }
+    padding: 8px 20px; }
 
 button[type="submit"] {
   background: #86bc42;
@@ -752,6 +755,9 @@ button[type="submit"] {
   border: 0;
   margin: 0 auto;
   padding: 9px 17px; }
+  button[type="submit"]:hover {
+    color: #86bc42;
+    background: #ffffff; }
 
 form ~ p {
   margin: 20px 0; }
@@ -782,6 +788,8 @@ footer .contact-details {
   footer .contact-details .contact-phone a, footer .contact-details .contact-email a {
     color: #ffffff;
     text-decoration: none; }
+  footer .contact-details .contact-phone a:hover, footer .contact-details .contact-email a:hover {
+    color: #86bc42; }
   footer .contact-details .contact-phone:before, footer .contact-details .contact-email:before {
     font-family: 'FontAwesome';
     content: '\f098';
@@ -832,6 +840,8 @@ footer .contact-details {
     text-decoration: none;
     color: #ffffff;
     text-transform: uppercase; }
+  .footer__nav a:hover {
+    color: #86bc42; }
 
 .copyright {
   padding: 20px 0;
@@ -843,6 +853,191 @@ footer .contact-details {
     padding: 0; }
   .copyright .copyright-color {
     color: #86bc42; }
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  h4.news-header {
+    font-size: 1.1rem;
+    margin-top: 22px; }
+  .news-details p {
+    line-height: 1.4rem; }
+  .wrapper {
+    width: 95%; }
+  .price-details li {
+    padding: 0.8rem 0; }
+  .price-box h6 {
+    padding: 10px 0 20px 0; }
+  .about {
+    padding-right: 60px; }
+  footer .contact-details {
+    padding-right: 10px; }
+  .newsletters {
+    padding-right: 0; }
+  .social .fa {
+    font-size: 2.5rem; }
+  .menu__course-type ul li {
+    font-size: 1.5rem; }
+  .logo {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto; }
+  .header__contact .fa p {
+    margin-right: 28px;
+    font-size: 0.8rem; }
+  .price-details ul {
+    min-height: 380px; } }
+
+@media (max-width: 883px) {
+  footer .contact h4 {
+    padding-bottom: 10px;
+    margin-bottom: 0; }
+  .contact-details {
+    margin-top: 0; }
+  .contact-phone, .contact-email {
+    font-size: 0.7rem; } }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .header__splash h1 + p {
+    background-color: #f0f2f7;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+    font-weight: 700; }
+  .single-course-box {
+    width: calc((100% / 2) - 11px); }
+  .single-image-box {
+    width: calc((100% / 2) - 9px); }
+  .news-image {
+    width: 100%; }
+  .news-details {
+    width: 100%; }
+  a.link-button {
+    bottom: 20px;
+    right: 30px; }
+  .news-block {
+    margin: 60px 0; }
+  .difference-block {
+    width: calc((100%) - 24px);
+    margin: 15px 0; }
+  .difference-details p {
+    font-size: 1.1rem; }
+  .difference-details h4 {
+    font-size: 2rem; }
+  .price-box {
+    width: 100%;
+    margin-bottom: 100px; }
+    .price-box:last-of-type {
+      margin-bottom: 0; }
+    .price-box h4 {
+      font-size: 2rem; }
+    .price-box h6 a {
+      font-size: 2rem; }
+  .price-circle p {
+    font-size: 2.5rem; }
+  .price-details li {
+    font-size: 2rem; }
+  .social .fa {
+    font-size: 3rem;
+    margin-bottom: 10px; }
+  .newsletters input[type="text"] {
+    width: 80%;
+    margin-bottom: 12px; }
+  .about {
+    padding-left: 10px;
+    width: 60%;
+    font-size: 1.1rem; }
+    .about p {
+      width: 85%; }
+  .courses {
+    width: 40%;
+    font-size: 1.1rem; }
+  .contact {
+    padding-left: 10px;
+    margin-top: 40px;
+    width: 40%;
+    font-size: 1.1rem; }
+  .newsletters {
+    margin-top: 40px;
+    width: 60%; }
+    .newsletters p {
+      font-size: 1.3rem; }
+  .indent-address {
+    width: 80%; } }
+
+/* header fixes */
+@media (max-width: 623px) {
+  address {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .logo {
+    width: 50%; }
+  .membership-links {
+    width: 50%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    text-align: center;
+    margin: 7px 0; }
+    .membership-links a, .membership-links span {
+      font-size: 1.3rem; } }
+
+@media (max-width: 623px) {
+  footer .contact h4 {
+    padding-bottom: 38px; }
+  .header__menu .menu {
+    display: none; }
+    .header__menu .menu li {
+      text-align: center;
+      width: calc(100% / 3);
+      padding-bottom: 10px; }
+      .header__menu .menu li:last-of-type {
+        text-align: center;
+        width: 100%; }
+      .header__menu .menu li a {
+        font-size: 1.5rem;
+        margin: 0; }
+  .single-course-box {
+    width: 100%; }
+  .single-image-box {
+    width: 100%; }
+  .header__menu .menu__aside {
+    padding-left: 0;
+    margin-top: 0; }
+    .header__menu .menu__aside li a {
+      padding-left: 0;
+      font-size: 1.5rem; }
+  .menu__course-type {
+    display: none; }
+  .menu__mobile {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    border: 2px solid #86bc42;
+    padding: 5px;
+    color: #86bc42; }
+  .header__menu .menu__mobile {
+    margin-top: 30px; } }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .social .fa {
+    font-size: 5rem; }
+  address {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
 
 /* make the partial
 save the partial
